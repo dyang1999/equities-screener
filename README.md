@@ -22,7 +22,7 @@ cd market-volatility-explorer
 
 ### 2️⃣ (Recommended) Create and activate a Conda environment
 ```bash
-conda create -n volsurface python=3.11 -y
+conda create -n volsurface python=3.10 -y
 conda activate volsurface
 ```
 
