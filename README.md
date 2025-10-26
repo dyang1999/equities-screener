@@ -1,2 +1,155 @@
-# equities-screener
-All in one dashboard for equities
+# 📊 Equities Screener
+
+An **interactive Streamlit dashboard** for market analysis and volatility exploration.  
+It provides a unified interface to analyze:
+- Historical stock data  
+- Volatility surfaces and smiles  
+- Analyst ratings  
+- Insider trading activity  
+- News headlines  
+
+All data is fetched live from **Yahoo Finance** and **Finviz**.
+
+---
+
+## ⚙️ Installation and Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/yourusername/market-volatility-explorer.git
+cd market-volatility-explorer
+```
+
+### 2️⃣ (Recommended) Create and activate a Conda environment
+```bash
+conda create -n volsurface python=3.11 -y
+conda activate volsurface
+```
+
+### 3️⃣ Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+✅ Example `requirements.txt` (already included):
+```
+streamlit>=1.38.0
+yfinance>=0.2.43
+plotly>=5.24.0
+pandas>=2.2.2
+numpy>=1.26.4
+scipy>=1.13.0
+beautifulsoup4>=4.12.3
+lxml>=5.3.0
+requests>=2.32.3
+```
+
+---
+
+## 🚀 Running the App
+
+Once dependencies are installed, start the Streamlit server:
+```bash
+streamlit run app.py
+```
+
+Then open your browser at **http://localhost:8501**.
+
+---
+
+## 🧱 Project Structure
+
+```
+📦 market-volatility-explorer
+├── app.py               # Main Streamlit app (UI + visualization)
+├── main.py              # Data orchestration and calculations
+├── functions.py         # Black-Scholes and implied volatility functions
+├── requirements.txt     # Dependency list
+└── README.md            # Project documentation
+```
+
+---
+
+## 🌟 Features
+
+### 🧭 1. Price History
+- View 10 years of historical data for any ticker.  
+- Plot closing prices with 20- and 50-day moving averages.  
+- Select data range: **YTD**, **1Y**, **5Y**, or **MAX**.
+
+### ⚡ 2. Volatility Surface
+- Calculates **implied volatility** using the Black–Scholes model.  
+- Builds an interactive **3D surface** across strike prices and expirations.  
+- Adjustable **risk-free rate**, **dividend yield**, and **strike range**.
+
+### 📈 3. Volatility Smile Explorer
+- Visualizes the **volatility smile** for chosen expiration dates.  
+- Supports plotting by **Strike Price** or **Moneyness**.  
+- Displays **ATM (At-The-Money) implied volatility**.
+
+### 📰 4. News Headlines
+- Scrapes real-time news for the selected ticker from **Finviz**.  
+- Displays clickable headlines with publication date and source.  
+- Handles network errors gracefully.
+
+### 📊 5. Analyst Ratings
+- Extracts analyst upgrades/downgrades and price target changes.  
+- Displays data directly from **Finviz’s Analyst Ratings** table.  
+- Organized by **date, action, analyst, and rating change**.
+
+### 🕵️ 6. Insider Trading
+- Scrapes insider trading data from Finviz.  
+- Displays **insider name, position, transaction type, shares, value**, and **SEC Form 4 link**.  
+- Matches Finviz’s table formatting for clarity.
+
+---
+
+## 🧠 Technical Highlights
+
+| Module | Description |
+|--------|--------------|
+| `functions.py` | Core math utilities: Black–Scholes pricing, implied volatility solvers. |
+| `main.py` | Handles stock data retrieval and options data processing. |
+| `app.py` | Streamlit UI: tabs, caching, visualization, and error handling. |
+| **Caching** | Uses `st.cache_data` to improve responsiveness. |
+| **Visualization** | Built with Plotly for 2D/3D interactivity. |
+
+---
+
+## 🧩 Error Handling and Resilience
+- Graceful handling of **Yahoo Finance rate limits** and **network errors**.  
+- Non-blocking UI: the app continues running even if certain data sources are unavailable.  
+- Automatic fallback warnings when data is missing.
+
+---
+
+## 🧰 Requirements
+- **Python 3.10+**
+- Internet access (for data fetching)
+- Works on Windows, macOS, or Linux
+
+---
+
+## 💡 Example Usage
+```bash
+streamlit run app.py
+```
+
+Enter a ticker symbol (e.g., `TSLA`, `AAPL`, `NVDA`) in the sidebar to explore:
+- Price charts  
+- Option volatility metrics  
+- News and analyst sentiment  
+- Insider trading activity  
+—all in one place.
+
+---
+
+## 🧑‍💻 Author
+**Developed by:** [Your Name or Team]  
+📧 Contact: your.email@example.com  
+
+---
+
+## 📜 License
+This project is licensed under the **MIT License** — you’re free to use, modify, and distribute with attribution.
+
