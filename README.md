@@ -30,20 +30,6 @@ conda activate volsurface
 ```bash
 pip install -r requirements.txt
 ```
-
-✅ Example `requirements.txt` (already included):
-```
-streamlit>=1.38.0
-yfinance>=0.2.43
-plotly>=5.24.0
-pandas>=2.2.2
-numpy>=1.26.4
-scipy>=1.13.0
-beautifulsoup4>=4.12.3
-lxml>=5.3.0
-requests>=2.32.3
-```
-
 ---
 
 ## 🚀 Running the App
@@ -123,12 +109,6 @@ Then open your browser at **http://localhost:8501**.
 
 ---
 
-## 🧰 Requirements
-- **Python 3.10+**
-- Internet access (for data fetching)
-- Works on Windows, macOS, or Linux
-
----
 
 ## 💡 Example Usage
 ```bash
@@ -144,12 +124,7 @@ Enter a ticker symbol (e.g., `TSLA`, `AAPL`, `NVDA`) in the sidebar to explore:
 
 ---
 
-## 🧑‍💻 Author
-**Developed by:** [Your Name or Team]  
-📧 Contact: your.email@example.com  
 
----
 
-## 📜 License
-This project is licensed under the **MIT License** — you’re free to use, modify, and distribute with attribution.
+
 
