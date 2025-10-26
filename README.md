@@ -16,7 +16,7 @@ All data is fetched live from **Yahoo Finance** and **Finviz**.
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/yourusername/market-volatility-explorer.git
+git clone https://github.com/dyang1999/equities-screener.git
 cd equities-screener
 ```
 
