@@ -17,13 +17,13 @@ All data is fetched live from **Yahoo Finance** and **Finviz**.
 ### 1️⃣ Clone the repository
 ```bash
 git clone https://github.com/yourusername/market-volatility-explorer.git
-cd market-volatility-explorer
+cd equities-screener
 ```
 
 ### 2️⃣ (Recommended) Create and activate a Conda environment
 ```bash
-conda create -n volsurface python=3.10 -y
-conda activate volsurface
+conda create -n equities-screener python=3.10 -y
+conda activate equities-screener
 ```
 
 ### 3️⃣ Install dependencies
@@ -38,9 +38,6 @@ Once dependencies are installed, start the Streamlit server:
 ```bash
 streamlit run app.py
 ```
-
-Then open your browser at **http://localhost:8501**.
-
 ---
 
 ## 🧱 Project Structure
@@ -100,12 +97,6 @@ Then open your browser at **http://localhost:8501**.
 | **Caching** | Uses `st.cache_data` to improve responsiveness. |
 | **Visualization** | Built with Plotly for 2D/3D interactivity. |
 
----
-
-## 🧩 Error Handling and Resilience
-- Graceful handling of **Yahoo Finance rate limits** and **network errors**.  
-- Non-blocking UI: the app continues running even if certain data sources are unavailable.  
-- Automatic fallback warnings when data is missing.
 
 ---
 
