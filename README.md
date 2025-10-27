@@ -85,6 +85,17 @@ streamlit run app.py
 - Displays **insider name, position, transaction type, shares, value**, and **SEC Form 4 link**.  
 - Matches Finviz’s table formatting for clarity.
 
+### 🎯 7. Prediction Market Insights
+- Integrates **Polymarket’s Gamma API** to explore active prediction markets.  
+- Search for events by **keywords, tickers, or macro themes** (e.g., *Fed*, *Tesla*, *Election*, *Inflation*).  
+- Categorizes results into:
+  - **🎯 Direct Matches** — keyword appears in the event title or slug.  
+  - **🧩 Market-Level Matches** — keyword found in one or more market questions.  
+- Displays:
+  - **Event title**, **total trading volume**, and **individual market outcomes** (Yes/No probabilities).  
+  - Clickable links to view live markets on **Polymarket**.  
+- Efficiently cached and sorted by **market volume**, with real-time data fetching and rate-limit handling.
+
 ---
 
 ## 🧠 Technical Highlights
@@ -96,10 +107,9 @@ streamlit run app.py
 | `app.py` | Streamlit UI: tabs, caching, visualization, and error handling. |
 | **Caching** | Uses `st.cache_data` to improve responsiveness. |
 | **Visualization** | Built with Plotly for 2D/3D interactivity. |
-
+| **External APIs** | Fetches live data from Yahoo Finance, Finviz, and Polymarket Gamma API. |
 
 ---
-
 
 ## 💡 Example Usage
 ```bash
@@ -112,10 +122,3 @@ Enter a ticker symbol (e.g., `TSLA`, `AAPL`, `NVDA`) in the sidebar to explore:
 - News and analyst sentiment  
 - Insider trading activity  
 —all in one place.
-
----
-
-
-
-
-
